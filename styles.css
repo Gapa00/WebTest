@@ -137,10 +137,6 @@
 /* ============================= OPISI OSEB ======================================= */
 
 
-.osebnoOzadje {
-    background-color: rgba(255, 240, 219, 0.61);
-}
-
 .titleOsebe {
     display: flex;
     margin-bottom: 2%;
@@ -190,7 +186,6 @@
     background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('images/ozadje.webp');
     background-size: 40% auto;
     z-index: 100;
-    /* min-height: 100vh; */
 }
 
 @media all and (max-device-width: 480px){
@@ -209,11 +204,6 @@
     top: 0;
     position: -webkit-sticky;
     position: sticky;
-
-    /* height: 150vw; */
-    /* padding-top: 10%;
-    padding-bottom: 22%; */
-    /* margin-bottom: 5%; */
 }
 
 @media all and (max-device-width: 480px){
@@ -226,8 +216,8 @@
 }
 
 .naslovnica {
-    padding-top: 15%;
-    padding-bottom: 30%;
+    padding-top: 10%;
+    padding-bottom: 50%;
 }
 
 .naslovnaVrsta {
@@ -244,15 +234,20 @@
     margin-bottom: 3%;
     font-size: 65px;
     font-weight: 500;
+    z-index: 1;
 }
 
 .besedilo {
     color: white;
     font-size: 24px;
     font-weight: 390;
-    /* line-height: 135%; */
     filter: drop-shadow(0 0 2px rgb(255, 255, 255));
 }
+/* 
+.besedilo a {
+    position: absolute;
+    top: 50%;
+} */
 
 @media all and (max-device-width: 700px) {
     .naslov {
@@ -269,6 +264,10 @@
 
 #sec-2 {
     padding: 100px 0px;
+    z-index: -1;
+    /* background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('images/ozadje.webp'); */
+
+
     /* overflow: hidden; */
     /* background-image: url('images/ozadje.webp');
     background-size: 30% auto;
@@ -412,7 +411,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+}   
 
 .kontakt h3 {
     font-size: 26px;

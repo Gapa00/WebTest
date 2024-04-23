@@ -1,25 +1,34 @@
-// // Toggle dropdown on click
-// document.addEventListener("DOMContentLoaded", function() {
-//     const dropdownBtn = document.querySelector(".dropbtn");
-//     const dropdownContent = document.querySelector(".dropdown-content");
+document.addEventListener("DOMContentLoaded", function() {
+    const besediloElement = document.querySelector('.besedilo');
+    const textElement = document.querySelector('.text-center');
 
-//     dropdownBtn.addEventListener("click", function() {
-//         dropdownContent.classList.toggle("show");
-//     });
+    besediloElement.addEventListener('click', function(event) {
+        consol.log('Besedilo je bilo kliknjeno');
+        const clickedElement = event.target;
 
-//     // Close the dropdown if the user clicks outside of it
-//     window.onclick = function(event) {
-//         if (!event.target.matches('.dropbtn')) {
-//             const dropdowns = document.getElementsByClassName("dropdown-content");
-//             for (let i = 0; i < dropdowns.length; i++) {
-//                 const openDropdown = dropdowns[i];
-//                 if (openDropdown.classList.contains('show')) {
-//                     openDropdown.classList.remove('show');
-//                 }
-//             }
-//         }
-//     }
-// });
+        // Check if the clicked element is a link or contains a link
+        if (clickedElement.tagName === 'A' || clickedElement.closest('a')) {
+            console.log('Link was clicked');
+            // Add your code here to handle link click
+        } else {
+            console.log('Text was clicked');
+            // Add your code here to handle text click
+        }
+    });
+    besediloElement.addEventListener('text', function(event) {
+        consol.log('Text je bilo kliknjeno');
+        const clickedElement = event.target;
+
+        // Check if the clicked element is a link or contains a link
+        if (clickedElement.tagName === 'A' || clickedElement.closest('a')) {
+            console.log('Link was clicked');
+            // Add your code here to handle link click
+        } else {
+            console.log('Text was clicked');
+            // Add your code here to handle text click
+        }
+    });
+});
 
 
 // Define latitude, longitude and zoom level
